@@ -1,31 +1,17 @@
 //feed
 
-
-
-
-
 $(document).ready(function () {
     $.ajax({
-        url: 'https://api.n.exchange/en/api/v1/currency/',
+        url: 'https://musing-ardinghelli-9cfa3b.netlify.app/v1.json',
         method: 'GET',
         dataType: 'json'
     }).done(function (reponse) {
-        reponse.forEach(element => {
-            if (element.code === "BTC") {
-                const divbtc = document.querySelector("#outputbtc")
-                divbtc.innerText = element.name
-            } else if (element.code === "ETH") {
-                const divbtc = document.querySelector("#outputeth")
-                divbtc.innerText = element.name
-            } else if (element.code === "XMR") {
-                const divbtc = document.querySelector("#outputxmr")
-                divbtc.innerText = element.name
-            } else if (element.code === "XVG") {
-                const divbtc = document.querySelector("#outputxvg")
-                divbtc.innerText = element.name
-            }
+        reponse.forEach(element => 
+            $('#api').append('<div>\
+            <h1>'+ element.name +'</h1>\
+            <img src="' + element.image + '"/>\
+            <div>' + element.symbol + '</div>', '</div>'));
         })
-    })
         .fail(function (erreur) {
             console.log("La requete a échoué" + JSON.stringify(erreur));
         })
