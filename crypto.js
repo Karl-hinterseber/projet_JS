@@ -1,4 +1,9 @@
 //feed
+
+
+
+
+
 $(document).ready(function () {
     $.ajax({
         url: 'https://api.n.exchange/en/api/v1/currency/',
@@ -29,6 +34,7 @@ $(document).ready(function () {
         });
 });
 
+
 //dropdown
 
 //quand l'utilisateur clique sur le bouton, le .toggle montre le contenu du menu
@@ -57,7 +63,26 @@ function getValue() {
     let recuptext = document.getElementById("in").value;
     // Afficher la valeur
     //alert(recuptext);
-    let b =document.body; 
-    b.append(recuptext);
+    let newDiv = document.createElement("div");
+    let newimg = document.createElement("img");
+    newimg.setAttribute("src", "images/xrp.png");
+    newDiv.appendChild(newimg);
+    let figcaption = document.createElement("figcaption")
+    newDiv.appendChild(figcaption);
+    let titlefeed = document.createElement("h1");
+    figcaption.appendChild(titlefeed);
+    titlefeed.innerHTML = recuptext;
+    let parent = document.getElementById("image_accueil");
+
+    // inserer newDiv avant premier enfant du parent
+    parent.insertBefore(newDiv, parent.firstChild)
+    // Ajouter le recuptext dans cet élément
+    
+    /*<div>
+    <img src="images/btc.png" />
+    <figcaption>
+        <h1 id="outputbtc"></h1>
+    </figcaption>
+</div>*/
 }
 

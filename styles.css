@@ -30,7 +30,7 @@ footer {
     color: rgb(255, 136, 0);
 }
 
-.image_accueil {
+#image_accueil {
     display: flex;
     justify-content: space-around;
 }
