@@ -14,7 +14,7 @@ nbImage = nbImage + 1;
 
 //boutton colonne
 $('.colonne').click(function() {
-    $('#image').css("background-color", "#FF6140");
+    $('#image').css("background-color", "rgb(255, 136, 0)");
     $('#image').css("display", "flex");
     $('#image').css("flex-direction", "column");
     $('#image').css("align-items", "center");
@@ -25,3 +25,12 @@ $('.mosaique').click(function() {
     $('#image').css("display", "block");
     $('#image').css("background-color", "white");
 })
+
+//bouton ajouter image
+$(document).ready(function(){
+    $("#addImage").click(function(){
+      let recupUrl = $("#champsUrl").val();
+      //alert(recupUrl);
+      $('#image').prepend('<img src="' + recupUrl + '"/>')
+    });
+  });
