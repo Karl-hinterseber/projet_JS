@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <script src="galerie.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="title_header">
@@ -26,9 +28,14 @@
         </div>
     </header>
     <main>
-        <button class="colonne" type="button">colonne</button>
-        <button class="mosaique" type="button">mosaique</button>
+        <button class="colonne">colonne</button>
+        <button class="mosaique">mosaique</button>
+        <p>Veuillez renseigner l'adresse url de l'image</p>
+        <input type="text" id="champsUrl">
+        <button type="button" id="addImage">ajouter une image</button>
         <div id="image">
+        </div>
+        <div id="envoyerImage">
 
         </div>
     </main>
@@ -36,4 +43,5 @@
         <p class="copyright">Copyright 2021</p>
     </footer>
 </body>
+
 </html>
