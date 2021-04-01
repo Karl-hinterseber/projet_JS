@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="imgGalerie.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="accueil.js" defer></script>
+    <script src="galerie.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="title_header">
-        <h1>Devenez pauvre avec la crypto</h1>
+            <h1>Devenez pauvre avec la crypto</h1>
         </div>
-        <nav class="crumbs">
-            <ul>
-                <li class="crumb"><a href="accueil.html">Accueil</a></li>
-                <li class="crumb"><a href="gallery.html">Galerie</a></li>
-                <li class="crumb"><a href="jeux.html">Jeux</a></li>
-            </ul>
-        </nav>
+        <div class="dropdown">
+            <button onclick="functionDropdown()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Accueil</a>
+                <a href="gallery.html">Galerie</a>
+                <a href="jeux.html">Jeux</a>
+            </div>
+        </div>
     </header>
     <main>
-        
+        <button class="colonne" type="button">colonne</button>
+        <button class="mosaique" type="button">mosaique</button>
+        <div id="image">
+
+        </div>
     </main>
     <footer>
         <p class="copyright">Copyright 2021</p>
