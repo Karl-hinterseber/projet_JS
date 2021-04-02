@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="accueil.js" defer></script>
+    <script src="jeux.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -24,7 +25,17 @@
         </div>
     </header>
     <main>
-  
+        <h1>Cliquez sur une image</h1>
+        <div id="imageJeux">
+            <img class="choice" src="images/pierre.jpg" id="pierreChoisit" alt='pierre'/>
+            <img  class="choice" src="images/papier.jpg" id="papierChoisit" alt="papier"/>
+            <img class="choice"  src="images/ciseaux.jpg" id="ciseauxChoisit" alt="ciseaux"/>
+        </div>
+  <p id="choixjoueur"></p>
+  <p id="choixpc"></p>
+  <p id="reponse"></p>
+  <p id="scorePlayer">score joueur = 0</p>
+  <p id="scoreOrdi">score pc= 0</p>
     </main>
     <footer>
         <p class="copyright">Copyright 2021</p>

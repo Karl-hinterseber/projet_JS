@@ -1,5 +1,6 @@
 //implementation d'image
 nbImage = 0;
+//for (nbImage = 0; nbImage< 12; nbImage++)
 while (nbImage < 12) {
     // créer variable image
     let img = document.createElement("img");

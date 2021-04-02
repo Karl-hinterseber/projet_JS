@@ -6,11 +6,12 @@ $(document).ready(function () {
         method: 'GET',
         dataType: 'json'
     }).done(function (reponse) {
+        //reponse.foreach(function(element) {});
         reponse.forEach(element => 
             $('#api').append('<div>\
             <h1>'+ element.name +'</h1>\
             <img src="' + element.image + '"/>\
-            <div>' + element.symbol + '</div>', '</div>'));
+            <div>' + element.symbol + '</div></div>'));
         })
         .fail(function (erreur) {
             console.log("La requete a échoué" + JSON.stringify(erreur));
